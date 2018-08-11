@@ -1,4 +1,4 @@
 function alertHello ()
 {
-    alert("aaaa touch my peepee");
+    alert("페이지 이동");
 }
