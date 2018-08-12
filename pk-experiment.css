@@ -365,14 +365,14 @@ body
 figure
 {
     width: 100%;
-    margin: 3em 0 6em 0;
+    margin: 3em 0 8em 0;
     padding: 1em 0 0 0;
 
     background-color: aliceblue;
     box-shadow: 0 8px 6px -6px #3f404d;
 
     position: relative;
-    z-index: 1;
+    z-index: 0;
 }
 
 /* 사진 이름은 살짝 어둡하고 또똣한 색 */
@@ -415,7 +415,7 @@ figure figcaption::before
 
     /* 뒷배경 / 그림자? */
     position: absolute;
-    z-index: -2;
+    z-index: -4;
     width: 100%;
     height: 7em;
 
@@ -424,23 +424,37 @@ figure figcaption::before
     background: linear-gradient(to bottom, #3f404dFF, #3f404dFF, #3f404d00);
 }
 
+/* 그림 감싸개 */
+figure #slidey-wrapper
+{
+    display: block;
+
+    /* 그림자가 더 돋보이게 마진좀;; */
+    margin: 0 auto 1em auto;
+
+    /* 반응형 : 그림이 알아서 움직이도록 */
+    width: 80vw;
+    height: 512px;
+
+    overflow: hidden; 
+}
+
 /* 사진에 이쁜 그림자좀 깔아줍시다 */
 figure img
 {
+    display: block;
+    max-height: 512px;
+    height: 100%;
+    width: auto;
+
     /* 그림자가 더 돋보이게 마진좀;; */
-    margin: 0 0 1em 0;
+    /* margin: 0 0 1em 0; */
 
     box-shadow: 
         -10px 10px 20px -5px #3f404d,
         10px 10px 20px -5px #3f404d
     ;
 
-    /* 반응형 : 그림이 알아서 움직이도록 */
-    width: auto;
-    height: auto;
-
-    max-width: 60vw;
-    max-height: 80vh;
 }
 
 .footer
@@ -453,4 +467,134 @@ figure img
     animation: rainbow-color 1s ease infinite;
 
     text-align: center;
+}
+
+/* 동아리 무언가 */
+.forum-wrapper
+{
+    display: flex;
+    flex-direction: row;
+
+    height: 350px;
+    margin: 2em 0;
+}
+
+/* 홍보 게시판 / 건의 게시판 둘 다 */
+.forum-wrapper .forum
+{
+    flex: 1;
+    display: block;
+    height: 100%;
+    margin: 0 2em;
+
+    position: relative;
+    background-color: orange;
+    box-shadow: -16px 0 25px 0 #36333288;
+}
+
+.forum-wrapper .forum h1
+{
+    display: block;
+    position: relative;
+    top: 0;
+    left: 50%;
+    width: 80%;
+    height: 80px;
+    padding: 0;
+    margin: 0 0 -40px 0;
+
+    font-size: 2em;
+    line-height: 80px;
+    border-radius: 10px;
+
+    transform: translate(-50%, -50%);
+
+    background-color: orangered;
+    color: aliceblue;
+}
+
+.forum-wrapper .forum ul
+{
+    display: flex;
+    height: 250px;
+    padding: 0;
+    margin: 0 0 0 0;
+
+    list-style: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: stretch;
+    justify-items: center;
+}
+
+.forum-wrapper .forum ul li
+{
+    flex: 1;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+    font-size: 2em;
+    background-color: #FFFAE1;
+}
+.forum-wrapper .forum ul li:nth-child(2n)
+{
+    background-color: #ece3cd;
+}
+
+.forum-wrapper .forum a
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 75px;
+
+    font-size: 2em;
+    line-height: 75px;
+    text-decoration: none;
+
+    color: #181413;
+    background-color: #FFDD00;
+}
+.forum-wrapper .forum a::before
+{
+    /* 아래 화살표 */
+    background-image: url(gfx/external-link-alt.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 50%;
+    content: "";
+
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+
+    text-align: center;
+    line-height: 75px;
+    
+    color: aliceblue;
+}
+
+/* 홍보 게시판 스타일 */
+.forum-wrapper .forum#club-ad
+{
+    background-color: #90D7FF;
+}
+.forum-wrapper .forum#club-ad h1
+{
+    background-color: #558DC6;
+}
+.forum-wrapper .forum#club-ad ul li
+{
+    background-color: aliceblue;
+}
+.forum-wrapper .forum#club-ad ul li:nth-child(2n)
+{
+    background-color: #e0e8f1;
 }

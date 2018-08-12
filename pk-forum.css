@@ -1,0 +1,71 @@
+#ohno-wrapper
+{
+    width: 512px;
+    height: fit-content;
+
+    margin: 0;
+}
+
+#ohno-wrapper h1
+{
+    width: auto;
+    font-size: 10em;
+    vertical-align: middle;
+
+    color: #FF0044;
+}
+
+#ohno-wrapper h2
+{
+    font-size: 2em;
+    vertical-align: middle;
+
+    color: aliceblue;
+}
+
+#ohno-wrapper a
+{
+    display: block;
+    position: relative;
+
+    width: 100%;
+    height: 64px;
+
+    font-size: 2em;
+    line-height: 64px;
+
+    background-color: #FFDD00;
+    color: #181413;
+    text-decoration: none;
+}
+#ohno-wrapper a::before
+{
+    /* 아래 화살표 */
+    background-image: url(gfx/external-link-alt.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 50%;
+    content: "";
+
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 64px;
+
+    text-align: center;
+    line-height: 64px;
+    
+    color: aliceblue;
+}
+
+.body
+{
+    height: 60vh;
+
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}

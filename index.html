@@ -14,65 +14,98 @@
         <!-- 놀랐습니다! -->
         <!-- 레이아웃 어쩌지 끄아앗 -->
         <div class="header">
-        <!-- PK CLUB 머리통 : 로고 & 검색바 etc -->
-        <div id="header-box">
-            <!-- LOGO -->
-            <img id="logo" width=876 height=322 src="gfx/logo.png">
-            <!-- 검색 -->
-            <div id="search-bar">
-                검색따윈 거둘뿐...
-                <div id="search-button" class="glyphicon glyphicon-search"></div>
+            <!-- PK CLUB 머리통 : 로고 & 검색바 etc -->
+            <div id="header-box">
+                <!-- LOGO -->
+                <a href="index.html"><img id="logo" width=876 height=322 src="gfx/logo.png"></a>
+                <!-- 검색 -->
+                <div id="search-bar">
+                    검색따윈 거둘뿐...
+                    <div id="search-button" class="glyphicon glyphicon-search"></div>
+                </div>
             </div>
-        </div>
-        <!-- 머리통 : 더 어웨이크닝 -->
-        <div id="header-nav-wrapper">
-            <ul id="header-nav">
-                <li>
-                    <a>학교 무엇</a>
-                </li>
-                <li>
-                    <a>동아리 무엇</a>
-                    <!-- 드롭다운? 메뉴 -->
-                    <ul class="dropdown-blyat">
-                        <li>
-                            <a onclick="alertHello()">PC-ZEN</a>
-                        </li>
-                        <li>
-                            <a onclick="alertHello()">태-그</a>
-                        </li>
-                        <li>
-                            <a onclick="alertHello()">두근두근 멀티코어</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a>괴시판</a>
-                </li>
-                <li>
-                    <a>만든 미친놈 나와</a>
+            <!-- 머리통 : 더 어웨이크닝 -->
+            <div id="header-nav-wrapper">
+                <ul id="header-nav">
+                    <li>
+                        <a>학교 무엇</a>
+                    </li>
+                    <li>
+                        <a>동아리 무엇</a>
+                        <!-- 드롭다운? 메뉴 -->
                         <ul class="dropdown-blyat">
                             <li>
-                                <a onclick="alertHello()">하나</a>
+                                <a onclick="alertHello()">PC-ZEN</a>
                             </li>
                             <li>
-                                <a onclick="alertHello()">둘</a>
+                                <a onclick="alertHello()">태그</a>
                             </li>
                             <li>
-                                <a onclick="alertHello()">셋</a>
+                                <a onclick="alertHello()">멀티코어</a>
+                            </li>
+                            <li>
+                                <a onclick="alertHello()">로직</a>
                             </li>
                         </ul>
-                </li>
-            </ul>
+                    </li>
+                    <li>
+                        <a>괴시판</a>
+                    </li>
+                    <li>
+                        <a>만든 미친놈 나와</a>
+                            <ul class="dropdown-blyat">
+                                <li>
+                                    <a onclick="alertHello()">하나</a>
+                                </li>
+                                <li>
+                                    <a onclick="alertHello()">둘</a>
+                                </li>
+                                <li>
+                                    <a onclick="alertHello()">셋</a>
+                                </li>
+                            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
 
     <!-- CLUB PK 몸통 : 글 같은거 -->
     <div class="body">
         <!-- 귀여운 köt -->
         <figure>
-            <img src="gfx/kort.jpg" width=300 height=200 alt="Take a look blyat">
+            <div id="slidey-wrapper">
+                <img class="slidey" src="gfx/PK-GOGI.png" height="300" alt="Take a look blyat">
+                <img class="slidey" src="gfx/kort.jpg" height="300" alt="Take a look blyat">
+                <img class="slidey" src="gfx/waaw.jpg" height="300" alt="Take a look blyat">
+            </div>
             <figcaption>대신 귀여운 냥냥이를 드리겠습니다</figcaption>
         </figure>
+
+        <!-- 게시판 같은거 -->
+        <div class="forum-wrapper">
+            <div class="forum" id="club-ad">
+                <h1>동아리 홍보 게시판</h1>
+                <ul id="threads">
+                    <li>저희 동아리에 들어오시면...</li>
+                    <li>멀티코어에서 찬영이랑 두근두근★코딩교육</li>
+                    <li>피씨젠에서 성은이의 공산주의 코딩교육[tm]</li>
+                    <li>초롱이가 터졌어요...</li>
+                    <li>성형수 팝니다</li>
+                    <li>☆시공의★폭풍☆ >>클릭<<</li>
+                </ul>
+                <a id="ad" href="forum.html">더 보기</a>
+            </div>
+            <div class="forum" id="club-request">
+                <h1>동아리 건의 게시판</h1>
+                <ul id="threads">
+                    <li>한국형 코딩 동아리 - "콜라겐" 건의</li>
+                    <li>성형수 팝니다</li>
+                    <li>동아리좀 더 일찍 끝내주시면 안되나요</li>
+                    <li>라따뚜의 동아리 추가 신청</li>
+                </ul>
+                <a id="request" href="forum.html">더 보기</a>
+            </div>
+        </div>
 
         <!-- 병신 -->
         <article>
@@ -212,5 +245,8 @@
     <div class="footer">
         CLUB PK - 저작권 우리건데 어기면 다리몽둥이가 프레첼이 되는 마법을 직접 경험하실겁니다.
     </div>
+
+    <!-- 슬라이드쇼 (개발중)) -->
+    <script src="pk-slideshow.js"></script>
 </body>
 </html>
